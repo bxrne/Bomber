@@ -26,7 +26,7 @@ window.onload = function(){
         game.rootScene.addChild(bomb1);
 
         bomb1.addEventListener("enterframe", function(){
-           if(count = 3) {
+           if(count == 3) {
              speed = 0;
              score_sign.text = "Game Over";
              game.rootScene.removeChild(bomb1);
