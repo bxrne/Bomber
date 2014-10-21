@@ -1,8 +1,9 @@
 enchant();
 
 window.onload = function(){
-    var speed = 4.001;
+    var speed = 4.000;
     var score = 0;
+    var count = 0;
     var game = new Core(320, 320);
     game.fps = 30;
     game.preload("assets/bomb.png");
@@ -14,7 +15,7 @@ window.onload = function(){
         score_sign.color ="white";
         score_sign.font = "30px Monospace";
 
-        score_sign.x = 160;
+        score_sign.x = 0;
         score_sign.y = 20;
 
         var bomb1 = new Sprite(32, 32);
@@ -25,11 +26,19 @@ window.onload = function(){
         game.rootScene.addChild(bomb1);
 
         bomb1.addEventListener("enterframe", function(){
+           if(count = 3) {
+             speed = 0;
+             score_sign.text = "Game Over";
+             game.rootScene.removeChild(bomb1);
+             game.rootScene.removeChild(bomb2);
+             game.rootScene.removeChild(bomb3);
+           };
            if(this.y < 290) {
             this.y  += speed;
             }else{
              this.y  = 0;
              this.x = Math.random() * 290;
+             count ++;
             }
 
         });
@@ -37,7 +46,7 @@ window.onload = function(){
 
         bomb1.addEventListener("touchstart", function(){
              this.y = 0;
-             this.x = Math.random() * 280;
+             this.x = Math.random() * 290;
              score ++;
              score_sign.text = String(score);
         });
@@ -55,6 +64,7 @@ window.onload = function(){
             }else{
              this.y  = 0;
              this.x = Math.random() * 280;
+             count ++;
             }
 
         });
@@ -62,7 +72,7 @@ window.onload = function(){
 
         bomb2.addEventListener("touchstart", function(){
              this.y = 0;
-             this.x = Math.random() * 288;
+             this.x = Math.random() * 280;
              score ++;
              score_sign.text = String(score);
         });
@@ -81,6 +91,7 @@ window.onload = function(){
             }else{
              this.y  = 0;
              this.x = Math.random() * 275;
+             count ++;
             }
 
         });
@@ -88,7 +99,7 @@ window.onload = function(){
 
         bomb3.addEventListener("touchstart", function(){
              this.y = 0;
-             this.x = Math.random() * 278;
+             this.x = Math.random() * 275;
              score ++;
              score_sign.text = String(score);
         });
