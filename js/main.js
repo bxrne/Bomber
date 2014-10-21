@@ -10,22 +10,13 @@ window.onload = function(){
     game.onload = function(){
 
         var score_sign = new Label();
-        score_sign.text = String("Score : " + score);
+        score_sign.text = String(score);
         game.rootScene.addChild(score_sign);
         score_sign.color ="white";
         score_sign.font = "30px Monospace";
 
         score_sign.x = 0;
         score_sign.y = 0;
-
-         var health_sign = new Label();
-        health_sign.text = String("Health : " + count);
-        game.rootScene.addChild(health_sign);
-        health_sign.color ="white";
-        health_sign.font = "30px Monospace";
-
-        score_sign.x = 300;
-        score_sign.y = 20;
 
         var bomb1 = new Sprite(32, 32);
         bomb1.image = game.assets["assets/bomb.png"];
@@ -35,7 +26,7 @@ window.onload = function(){
         game.rootScene.addChild(bomb1);
 
         bomb1.addEventListener("enterframe", function(){
-           if(count == 0) {
+           if(count == 3) {
              speed = 0;
              score_sign.text = "Game Over";
              game.rootScene.removeChild(bomb1);
@@ -47,7 +38,7 @@ window.onload = function(){
             }else{
              this.y  = 0;
              this.x = Math.random() * 290;
-             count --;
+             count ++;
             }
 
         });
@@ -73,7 +64,7 @@ window.onload = function(){
             }else{
              this.y  = 0;
              this.x = Math.random() * 280;
-             count --;
+             count ++;
             }
 
         });
@@ -100,7 +91,7 @@ window.onload = function(){
             }else{
              this.y  = 0;
              this.x = Math.random() * 275;
-             count --;
+             count ++;
             }
 
         });
