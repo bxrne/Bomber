@@ -3,7 +3,7 @@ enchant();
 window.onload = function(){
     var speed = 4.000;
     var score = 0;
-    var count = 3;
+    var count = 0;
     var game = new Core(320, 320);
     game.fps = 30;
     game.preload("assets/bomb.png");
