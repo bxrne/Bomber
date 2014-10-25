@@ -3,8 +3,5 @@ body {
   padding: 0;
 }
 canvas {
-  position:absolute;
   background:green;
-  left:0;
-  top:0;
 }
