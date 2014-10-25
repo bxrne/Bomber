@@ -22,7 +22,7 @@ window.onload = function(){
 
         var bomb1 = new Sprite(32, 32);
         bomb1.image = game.assets["assets/bomb.png"];
-        bomb1.x = Math.random() * 290;
+        bomb1.x = Math.random() * 291;
         bomb1.y = 0;
         bomb1.frame = 5;
         game.rootScene.addChild(bomb1);
@@ -50,14 +50,14 @@ window.onload = function(){
 
         bomb1.addEventListener("touchstart", function(){
              this.y = 0;
-             this.x = Math.random() * 290;
+             this.x = Math.random() * 295;
              score ++;
              score_sign.text = "Score :" + String(score);
         });
 
         var bomb2 = new Sprite(32, 32);
         bomb2.image = game.assets["assets/bomb.png"];
-        bomb2.x = Math.random() * 280;
+        bomb2.x = Math.random() * 281;
         bomb2.y = 0;
         bomb2.frame = 5;
         game.rootScene.addChild(bomb2);
@@ -67,7 +67,7 @@ window.onload = function(){
             this.y  += speed;
             }else{
              this.y  = 0;
-             this.x = Math.random() * 280;
+             this.x = Math.random() * 285;
              count ++;
             }
         });
@@ -102,7 +102,7 @@ window.onload = function(){
 
         bomb3.addEventListener("touchstart", function(){
              this.y = 0;
-             this.x = Math.random() * 275;
+             this.x = Math.random() * 270;
              score ++;
              score_sign.text = "Score :" + String(score);
         });
