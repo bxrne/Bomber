@@ -32,6 +32,8 @@ window.onload = function(){
              game.rootScene.removeChild(bomb1);
              game.rootScene.removeChild(bomb2);
              game.rootScene.removeChild(bomb3);
+
+             location.reload();
            };
            if(this.y < 290) {
             this.y  += speed;
