@@ -1,7 +1,7 @@
 enchant();
 
 window.onload = function(){
-    var speed = 4.000;
+    var speed = 2.000;
     var score = 0;
     var count = 0;
     var game = new Core(320, 320);
