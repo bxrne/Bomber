@@ -52,7 +52,7 @@ window.onload = function(){
              this.y = 0;
              this.x = Math.random() * 295;
              score ++;
-             speed += 0.5;
+             speed += 0.1;
              score_sign.text = "Score :" + String(score);
         });
 
@@ -78,7 +78,7 @@ window.onload = function(){
              this.y = 0;
              this.x = Math.random() * 280;
              score ++;
-             speed += 0.5;
+             speed += 0.1;
              score_sign.text = "Score :" + String(score);
         });
 
@@ -106,7 +106,7 @@ window.onload = function(){
              this.y = 0;
              this.x = Math.random() * 270;
              score ++;
-             speed += 0.5;
+             speed += 0.1;
              score_sign.text = "Score :" + String(score);
         });
     };
